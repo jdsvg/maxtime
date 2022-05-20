@@ -1,5 +1,6 @@
 package co.com.choucair.certification.maxtime.stepdefinitions;
 
+import co.com.choucair.certification.maxtime.tasks.*;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -7,13 +8,6 @@ import java.util.List;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import co.com.choucair.certification.maxtime.model.MaxtimeData;
-import co.com.choucair.certification.maxtime.tasks.GoToTheCreate;
-import co.com.choucair.certification.maxtime.tasks.GoToTheSectionNewReport;
-import co.com.choucair.certification.maxtime.tasks.Login;
-import co.com.choucair.certification.maxtime.tasks.OpenUp;
-
-
-
 
 
 public class ReportTimesInMaxtimeStepDefinitions {
@@ -41,7 +35,8 @@ public class ReportTimesInMaxtimeStepDefinitions {
     }
 
     @When("^he is in the detailed report section he will fill in the fields$")
-    public void heIsInTheDetailedReportSectionHeWillFillInTheFields(String arg1){
+    public void heIsInTheDetailedReportSectionHeWillFillInTheFields(List<MaxtimeData> new_report_data){
+        theActorInTheSpotlight().attemptsTo(RegisterANewReport.withThe(new_report_data));
 
     }
 //

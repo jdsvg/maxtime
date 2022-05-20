@@ -11,16 +11,13 @@ import static co.com.choucair.certification.maxtime.userinterface.GoToTheSection
 public class GoToTheSectionNewReport implements Task {
 
     private String current_date_data_to_element;
-
     public GoToTheSectionNewReport(String current_date_data){
         this.current_date_data_to_element = current_date_data;
     }
 
-
     public static GoToTheSectionNewReport reportWith(String current_date){
         return Tasks.instrumented(GoToTheSectionNewReport.class, current_date);
     }
-
 
     @Override
     public <T extends Actor> void performAs(T actor) {
