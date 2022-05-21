@@ -14,9 +14,3 @@ Psrc/main/java/co/com/choucair/certification/maxtime/userinterface/LoginPage.jav
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 C
 serenity.properties,2\5\25f1bbdc8dba7ca4a4b90251f1ef69621b24a28c
-’
-bsrc/main/java/co/com/choucair/certification/maxtime/userinterface/GoToTheSectionNewReportPage.java,0\c\0cf48bbc140252fea8582618a77b6557505a5ccb
-t
-Dsrc/main/java/co/com/choucair/certification/maxtime/tasks/Login.java,9\b\9be35adee334165c30a97890622ba1af3b289a78
-ˆ
-Xsrc/main/java/co/com/choucair/certification/maxtime/userinterface/GoToTheCreatePage.java,1\7\17728fee8e34b25bfa6b2643a4b7a14a86f08991

@@ -6,9 +6,11 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.questions.Text;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.choucair.certification.maxtime.userinterface.GoToTheCreatePage.A_BUTTON_NEW_DETAIL_REPORT;
 import static co.com.choucair.certification.maxtime.userinterface.GoToTheSectionNewReportPage.*;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class GoToTheSectionNewReport implements Task {
 
@@ -24,9 +26,9 @@ public class GoToTheSectionNewReport implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
                 actor.attemptsTo(
-
-                        Click.on(SEARCH_CURRENT_DATE), Click.on(SEARCH_CURRENT_DATE)
-//                        ,Click.on(A_BUTTON_NEW_DETAIL_REPORT)
+                        WaitUntil.the(SEARCH_CURRENT_DATE,isVisible()).forNoMoreThan(60).seconds()
+                        ,Click.on(SEARCH_CURRENT_DATE)
+//                        ,Click.on(SEARCH_CURRENT_DATE)
 
         );
     }

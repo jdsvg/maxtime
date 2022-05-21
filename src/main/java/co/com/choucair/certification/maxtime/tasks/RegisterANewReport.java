@@ -31,8 +31,8 @@ public class RegisterANewReport implements Task {
             TimeUnit.SECONDS.sleep(10);}
         catch (InterruptedException e) {e.printStackTrace();}
         actor.attemptsTo(
-//                WaitUntil.the(TD_PROJECT,isVisible()).forNoMoreThan(20).seconds()
-                Click.on(TD_PROJECT)
+                WaitUntil.the(TD_PROJECT,isVisible()).forNoMoreThan(20).seconds()
+                ,Click.on(TD_PROJECT)
 ////                ,Click.on(TD_PROJECT)
                 ,WaitUntil.the(X_1_INPUT,isVisible()).forNoMoreThan(20).seconds()
 ////                ,Click.on(X_1_INPUT)
