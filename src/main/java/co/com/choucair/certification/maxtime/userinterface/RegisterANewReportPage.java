@@ -1,19 +1,24 @@
 package co.com.choucair.certification.maxtime.userinterface;
 
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.IFrame;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class RegisterANewReportPage extends PageObject {
 
 //    Boton para proyectos
+    public static final IFrame I_FRAME = IFrame.withPath(By.className("dxpc-iFrame"));
+
     public static final Target TD_PROJECT = Target.the("Button to open popup for Proyecto").located(
-            By.cssSelector("td#Vertical_v6_MainLayoutEdit_xaf_l128_xaf_dviProyecto_Edit_Find_B")
+            By.xpath("//div[@id='Vertical_v6_MainLayoutEdit_xaf_l128_xaf_dviProyecto_Edit_Find_CD']")
     );
 
-    public static final Target X_1 = Target.the("Button to open popup for Proyecto").located(
-            By.id("PopupWindowCallbackPanel_PopupWindow53944510_PWH-1")
+    public static final Target X_1_INPUT = Target.the("Div from the new popup").inIFrame(I_FRAME).located(
+            By.id("Dialog_SearchActionContainer_Menu_ITCNT0_xaf_a0_Ed_I")
     );
+
+
 
 
 

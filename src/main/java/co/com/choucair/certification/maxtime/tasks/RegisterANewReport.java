@@ -1,6 +1,7 @@
 package co.com.choucair.certification.maxtime.tasks;
 
 import co.com.choucair.certification.maxtime.model.MaxtimeData;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -9,7 +10,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import static co.com.choucair.certification.maxtime.userinterface.RegisterANewReportPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-
+import net.serenitybdd.screenplay.targets.IFrame;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -26,18 +27,22 @@ public class RegisterANewReport implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        try {
+            TimeUnit.SECONDS.sleep(10);}
+        catch (InterruptedException e) {e.printStackTrace();}
         actor.attemptsTo(
-                WaitUntil.the(TD_PROJECT,isVisible()).forNoMoreThan(20).seconds()
-                ,Click.on(TD_PROJECT)
-//                ,WaitUntil.the(X_1,isVisible()).forNoMoreThan(20).seconds()
-//                ,Click.on(X_1)
-//                ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(10).seconds()
-//                ,Click.on(INPUT_POPUP)
+//                WaitUntil.the(TD_PROJECT,isVisible()).forNoMoreThan(20).seconds()
+                Click.on(TD_PROJECT)
+////                ,Click.on(TD_PROJECT)
+                ,WaitUntil.the(X_1_INPUT,isVisible()).forNoMoreThan(20).seconds()
+////                ,Click.on(X_1_INPUT)
+////                ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(10).seconds()
 ////                ,Click.on(INPUT_POPUP)
-//                ,Enter.theValue(new_report_data_to_form.get(0).getProyecto()).into(INPUT_POPUP)
-//                ,WaitUntil.the(SPAN_CHECK_ITEM_POPUP,isVisible()).forNoMoreThan(10).seconds()
+////                ,Click.on(INPUT_POPUP)
+                ,Enter.theValue(new_report_data_to_form.get(0).getProyecto()).into(X_1_INPUT)
+////                ,WaitUntil.the(SPAN_CHECK_ITEM_POPUP,isVisible()).forNoMoreThan(10).seconds()
 //                ,Click.on(SPAN_CHECK_ITEM_POPUP)
-//                ,Click.on(A_BUTTON_ACEPTP)
+////                ,Click.on(A_BUTTON_ACEPTP)
 
         );
         try {

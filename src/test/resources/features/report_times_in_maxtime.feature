@@ -11,7 +11,7 @@ Feature: Maxtime
 
   Scenario Outline: Generate a new report in Maxtime
     And he go to select the record with the date of 20/05/2022
-    And he go to create a new detailed report
+    And creates a new detailed report
     When he is in the detailed report section he will fill in the fields
       |proyecto    |tipo_hora   |servicio   |actividad   |horas_ejecutadas   |comentario   |
       |<proyecto>    |<tipo_hora> |<servicio> |<actividad> |<horas_ejecutadas> |<comentario> |

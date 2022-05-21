@@ -3,11 +3,14 @@ package co.com.choucair.certification.maxtime.stepdefinitions;
 import co.com.choucair.certification.maxtime.tasks.*;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
+
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import co.com.choucair.certification.maxtime.model.MaxtimeData;
+import cucumber.api.java.en.When;
 
 
 public class ReportTimesInMaxtimeStepDefinitions {
@@ -29,9 +32,9 @@ public class ReportTimesInMaxtimeStepDefinitions {
         theActorInTheSpotlight().attemptsTo(GoToTheSectionNewReport.reportWith(current_date));
     }
 
-    @And("^he go to create a new detailed report$")
-    public void heGoToCreateANewDetailedReport(){
-        theActorInTheSpotlight().attemptsTo(GoToTheCreate.newReport());
+    @Given("^creates a new detailed report$")
+    public void createsANewDetailedReport(){
+        theActorInTheSpotlight().attemptsTo(Create.report());
     }
 
     @When("^he is in the detailed report section he will fill in the fields$")
