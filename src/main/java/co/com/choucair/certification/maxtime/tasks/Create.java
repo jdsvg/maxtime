@@ -12,7 +12,7 @@ import static co.com.choucair.certification.maxtime.userinterface.GoToTheCreateP
 
 public class Create implements Task {
 
-    public static Create report(){
+    public static Create report (){
         return Tasks.instrumented(Create.class);
     }
 
