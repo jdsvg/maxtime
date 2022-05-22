@@ -41,9 +41,23 @@ public class RegisterANewReportPage extends PageObject {
     );
 
 
-    public static final Target TD_PROJECT = Target.the("Button to open popup for Proyecto").located(
-//            By.xpath("//div[@id='Vertical_v6_MainLayoutEdit_xaf_l128_xaf_dviProyecto_Edit_Find_CD']")
+    public static final Target TD_BUTTON_PROJECT = Target.the("Button to open popup for Proyecto").located(
             By.cssSelector("div#Content table tbody tr + tr table  tbody td#separatorCell + td table tbody div#CP  table tbody  div +div table +table tbody div +div +div +div table tbody td +td table tbody td div table tbody tr td +td table tbody tr td div + div")
     );
+
+
+    public static final Target TD_ITEMS_LIST = Target.the("Items list that show de fields for the report").located(
+            By.cssSelector("td.HItem.FirstColumn.GroupContent")
+//    div.dxpc-mainDiv.dxpc-shadow tbody table +table tr (->td)
+    );
+
+
+
+    public static final Target TR_LIST_X = Target.the("Button to open popup for Proyecto").located(
+//            By.xpath("//div[@id='Vertical_v6_MainLayoutEdit_xaf_l128_xaf_dviProyecto_Edit_Find_CD']")
+            By.xpath("//div[@class='Item'][10]//div[@class='dxpc-mainDiv dxpc-shadow']//table[2]//tr")
+//    div.dxpc-mainDiv.dxpc-shadow tbody table +table tr (->td)
+    );
+
 
 }
