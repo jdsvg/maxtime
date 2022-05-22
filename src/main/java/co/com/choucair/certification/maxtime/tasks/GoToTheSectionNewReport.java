@@ -4,11 +4,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.conditions.Check;
-import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.choucair.certification.maxtime.userinterface.GoToTheCreatePage.A_BUTTON_NEW_DETAIL_REPORT;
 import static co.com.choucair.certification.maxtime.userinterface.GoToTheSectionNewReportPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 

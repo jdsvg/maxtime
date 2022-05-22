@@ -33,17 +33,19 @@ public class RegisterANewReport implements Task {
         actor.attemptsTo(
                 WaitUntil.the(TD_PROJECT,isVisible()).forNoMoreThan(20).seconds()
                 ,Click.on(TD_PROJECT)
-////                ,Click.on(TD_PROJECT)
-                ,WaitUntil.the(X_1_INPUT,isVisible()).forNoMoreThan(20).seconds()
-////                ,Click.on(X_1_INPUT)
-////                ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(10).seconds()
-////                ,Click.on(INPUT_POPUP)
-////                ,Click.on(INPUT_POPUP)
-                ,Enter.theValue(new_report_data_to_form.get(0).getProyecto()).into(X_1_INPUT)
+                ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(20).seconds()
+                ,Enter.theValue(new_report_data_to_form.get(0).getProyecto()).into(INPUT_POPUP)
+                ,Click.on(DIV_BUTTON_SEARH_ITEM)
+        );
+        try {
+            TimeUnit.SECONDS.sleep(10);}
+        catch (InterruptedException e) {e.printStackTrace();}
+        actor.attemptsTo(
+                Click.on(SPAN_CHECK_ITEM_POPUP)
+                ,Click.on(A_BUTTON_ACEPT_POPUP)
 ////                ,WaitUntil.the(SPAN_CHECK_ITEM_POPUP,isVisible()).forNoMoreThan(10).seconds()
 //                ,Click.on(SPAN_CHECK_ITEM_POPUP)
 ////                ,Click.on(A_BUTTON_ACEPTP)
-
         );
         try {
             TimeUnit.SECONDS.sleep(10);}

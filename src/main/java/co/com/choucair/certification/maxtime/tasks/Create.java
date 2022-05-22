@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.concurrent.TimeUnit;
 
-import static co.com.choucair.certification.maxtime.userinterface.GoToTheCreatePage.A_BUTTON_NEW_DETAIL_REPORT;
+import static co.com.choucair.certification.maxtime.userinterface.CreatePage.A_BUTTON_NEW_DETAIL_REPORT;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
