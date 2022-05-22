@@ -20,4 +20,4 @@ Feature: Maxtime
 
     Examples:
       |proyecto                   |tipo_hora   |servicio                   |actividad       |horas_ejecutadas |comentario                      |
-      |Varios Choucair Bogotá Banking |H. Choucair|pruebas generales clásicas |formación guías |9                |Reto: Automatizacion de Maxtime |
+      |Varios Choucair Bogotá Banking |H. Choucair|pruebas generales clásicas |FORMACIÓN GUÍAS|9                |Reto: Automatizacion de Maxtime |

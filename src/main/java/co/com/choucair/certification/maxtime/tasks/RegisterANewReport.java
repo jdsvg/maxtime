@@ -1,5 +1,6 @@
 package co.com.choucair.certification.maxtime.tasks;
 
+import co.com.choucair.certification.maxtime.interactions.SelectItem;
 import co.com.choucair.certification.maxtime.interactions.SelectTypeItem;
 import co.com.choucair.certification.maxtime.model.MaxtimeData;
 import net.serenitybdd.screenplay.Actor;
@@ -27,33 +28,38 @@ public class RegisterANewReport implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        try {
-            TimeUnit.SECONDS.sleep(10);}
-        catch (InterruptedException e) {e.printStackTrace();}
         actor.attemptsTo(
                 WaitUntil.the(TD_BUTTON_PROJECT,isVisible()).forNoMoreThan(20).seconds()
                 ,Click.on(TD_BUTTON_PROJECT)
                 ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(20).seconds()
                 ,Enter.theValue(new_report_data_to_form.get(0).getProyecto()).into(INPUT_POPUP)
-                ,Click.on(DIV_BUTTON_SEARH_ITEM)
-        );
-        try {
-            TimeUnit.SECONDS.sleep(2);}
-        catch (InterruptedException e) {e.printStackTrace();}
-        actor.attemptsTo(
-                Click.on(SPAN_CHECK_ITEM_POPUP)
+                ,Click.on(DIV_BUTTON_SEARH_ITEM_POPUP)
+                ,Click.on(SPAN_SELECT_CHECK_ITEM_POPUP)
                 ,Click.on(A_BUTTON_ACEPT_POPUP)
 
+                ,WaitUntil.the(TD_ITEMS_LIST,isVisible()).forNoMoreThan(20).seconds()
+                ,SelectTypeItem.type_items_list(TD_ITEMS_LIST, new_report_data_to_form.get(0).getTipo_hora(), true,false)
+                , SelectItem.items_list(TD_ITEMS_LIST,new_report_data_to_form.get(0).getTipo_hora())
+
+                ,WaitUntil.the(TD_BUTTON_SERVICE,isVisible()).forNoMoreThan(20).seconds()
+                ,Click.on(TD_BUTTON_SERVICE)
+                ,WaitUntil.the(INPUT_POPUP,isVisible()).forNoMoreThan(20).seconds()
+                ,Enter.theValue(new_report_data_to_form.get(0).getServicio()).into(INPUT_POPUP)
+                ,Click.on(DIV_BUTTON_SEARH_ITEM_POPUP)
+                ,Click.on(SPAN_SELECT_CHECK_ITEM_POPUP)
+                ,Click.on(A_BUTTON_ACEPT_POPUP)
+
+                ,WaitUntil.the(TD_ITEMS_LIST,isVisible()).forNoMoreThan(20).seconds()
+                ,SelectTypeItem.type_items_list(TD_ITEMS_LIST, new_report_data_to_form.get(0).getServicio(), false,true)
+                ,SelectItem.items_list(TD_ITEMS_LIST,new_report_data_to_form.get(0).getActividad())
+
+                ,Enter.theValue(new_report_data_to_form.get(0).getHoras_ejecutadas()).into(INPUT_HOURS_EXECUTED)
+
+                ,Click.on(A_BUTTON_SAVE_AND_CLOSE)
         );
+
         try {
-            TimeUnit.SECONDS.sleep(2);}
-        catch (InterruptedException e) {e.printStackTrace();}
-        actor.attemptsTo(
-//                    SelectTypeItem.laLista(TD_ITEMS_LIST, new_report_data_to_form.get(0).getTipo_hora(), true)
-                    SelectTypeItem.laLista(TD_ITEMS_LIST, new_report_data_to_form.get(0).getServicio(), false,true)
-        );
-        try {
-            TimeUnit.SECONDS.sleep(10);}
+            TimeUnit.SECONDS.sleep(5);}
         catch (InterruptedException e) {e.printStackTrace();}
     }
 }

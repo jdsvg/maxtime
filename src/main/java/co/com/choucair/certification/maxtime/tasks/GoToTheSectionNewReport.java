@@ -5,13 +5,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
 import static co.com.choucair.certification.maxtime.userinterface.GoToTheSectionNewReportPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class GoToTheSectionNewReport implements Task {
 
     private String current_date_data_to_element;
+
     public GoToTheSectionNewReport(String current_date_data){
         this.current_date_data_to_element = current_date_data;
     }
@@ -25,7 +25,6 @@ public class GoToTheSectionNewReport implements Task {
                 actor.attemptsTo(
                         WaitUntil.the(SEARCH_CURRENT_DATE,isVisible()).forNoMoreThan(60).seconds()
                         ,Click.on(SEARCH_CURRENT_DATE)
-//                        ,Click.on(SEARCH_CURRENT_DATE)
 
         );
     }
