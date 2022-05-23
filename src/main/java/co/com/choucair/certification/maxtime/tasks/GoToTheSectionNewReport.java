@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyEnabled;
 import static co.com.choucair.certification.maxtime.userinterface.GoToTheSectionNewReportPage.*;
 
 public class GoToTheSectionNewReport implements Task {
@@ -17,8 +17,8 @@ public class GoToTheSectionNewReport implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
             actor.attemptsTo(
-                    WaitUntil.the(SEARCH_CURRENT_DATE2, isEnabled()).forNoMoreThan(60).seconds()
-                    ,Click.on(SEARCH_CURRENT_DATE2)
+                    WaitUntil.the(SEARCH_CURRENT_DATE, isCurrentlyEnabled()).forNoMoreThan(60).seconds()
+                    ,Click.on(SEARCH_CURRENT_DATE)
             );
     }
 }
