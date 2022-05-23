@@ -5,18 +5,15 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
 
 public class SelectTypeItem implements Interaction {
     private Target lista;
-    private String option;
     private boolean flag_tipo_hora;
     private boolean flag_actividad;
 
-    public SelectTypeItem(Target lista, String option, boolean flag_type_hora, boolean flag_actividad){
+    public SelectTypeItem(Target lista, boolean flag_type_hora, boolean flag_actividad){
         this.lista = lista;
-        this.option = option;
         this.flag_tipo_hora = flag_type_hora;
         this.flag_actividad = flag_actividad;
     }
@@ -33,13 +30,11 @@ public class SelectTypeItem implements Interaction {
                     listObjeto2.get(1).click();
                     break;
                 }
-
             }
     }
 
-
-    public static SelectTypeItem type_items_list(Target lista, String option, boolean flag_tipo_hora, boolean flag_actividad){
-        return new SelectTypeItem(lista, option, flag_tipo_hora, flag_actividad);
+    public static SelectTypeItem type_items_list(Target lista, boolean flag_tipo_hora, boolean flag_actividad){
+        return new SelectTypeItem(lista, flag_tipo_hora, flag_actividad);
     }
 
 }

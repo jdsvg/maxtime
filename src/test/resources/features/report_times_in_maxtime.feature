@@ -15,8 +15,8 @@ Feature: Maxtime
     When he is in the detailed report section he will fill in the fields
       |proyecto    |tipo_hora   |servicio   |actividad   |horas_ejecutadas   |comentario   |
       |<proyecto>    |<tipo_hora> |<servicio> |<actividad> |<horas_ejecutadas> |<comentario> |
-    Then he verifies the information in the new carving report record
-    And he is going to close the day
+    Then now verifies the information in the new carving report record
+#    And he is going to close the day
 
     Examples:
       |proyecto                   |tipo_hora   |servicio                   |actividad       |horas_ejecutadas |comentario                      |

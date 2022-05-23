@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-
 import static co.com.choucair.certification.maxtime.userinterface.LoginPage.*;
 import java.util.List;
 
@@ -19,8 +18,6 @@ public class Login implements Task {
     public static Login onThePageWith(List<MaxtimeData> login_data){
         return Tasks.instrumented(Login.class, login_data);
     }
-
-
 
     @Override
     public <T extends Actor> void performAs(T actor) {

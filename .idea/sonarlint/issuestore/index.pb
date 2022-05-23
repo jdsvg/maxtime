@@ -1,8 +1,4 @@
 
-Å
-Qsrc/main/java/co/com/choucair/certification/maxtime/userinterface/OpenUpPage.java,4\c\4cf45118583e04e06b6436c5b5834e740eaf7580
-r
-Bsrc/main/java/co/com/choucair/certification/maxtime/util/Hook.java,5\1\5147cae0316972c56bd63959642d280658a451e4
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 :
@@ -12,9 +8,3 @@ Bsrc/main/java/co/com/choucair/certification/maxtime/util/Hook.java,5\1\5147cae
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 C
 serenity.properties,2\5\25f1bbdc8dba7ca4a4b90251f1ef69621b24a28c
-z
-Jsrc/main/java/co/com/choucair/certification/maxtime/model/MaxtimeData.java,1\a\1aa7e28a28a3e6183a09f6589ecdad59ebddc704
-t
-Dsrc/main/java/co/com/choucair/certification/maxtime/tasks/Login.java,9\b\9be35adee334165c30a97890622ba1af3b289a78
-w
-Gsrc/test/java/co/com/choucair/certification/maxtime/runners/Runner.java,9\0\902b3bb4035ea9ea70b138ea18cb833b6dad9896

@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
 
 public class SelectItem implements Interaction{
@@ -19,12 +18,12 @@ public class SelectItem implements Interaction{
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        List<WebElement> listObjeto3 = lista.resolveFor(actor).findElements(By.cssSelector("td +td tbody tbody table+div+table+input+div table table+table tbody"));
-        List<WebElement> listObjeto4 = lista.resolveFor(actor).findElements(By.cssSelector("td +td tbody tbody table+div+table+input+div table table+table tbody td"));
-                    for (int j = 0; j < listObjeto3.size(); j++) {
-                        for (int k = 0; k < listObjeto4.size(); k++) {
-                            if (listObjeto4.get(k).getText().equals(option)) {
-                                listObjeto4.get(k).click();
+        List<WebElement> listObjeto_tbody = lista.resolveFor(actor).findElements(By.cssSelector("td +td tbody tbody table+div+table+input+div table table+table tbody"));
+        List<WebElement> listObjeto_td = lista.resolveFor(actor).findElements(By.cssSelector("td +td tbody tbody table+div+table+input+div table table+table tbody td"));
+                    for (int j = 0; j < listObjeto_tbody.size(); j++) {
+                        for (int k = 0; k < listObjeto_td.size(); k++) {
+                            if (listObjeto_td.get(k).getText().equals(option)) {
+                                listObjeto_td.get(k).click();
                                 break;
                             }
                         }

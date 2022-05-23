@@ -5,9 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
 import java.util.concurrent.TimeUnit;
-
 import static co.com.choucair.certification.maxtime.userinterface.CreatePage.A_BUTTON_NEW_DETAIL_REPORT;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -24,8 +22,7 @@ public class Create implements Task {
                 WaitUntil.the(A_BUTTON_NEW_DETAIL_REPORT,isVisible()).forNoMoreThan(60).seconds()
                 ,Click.on(A_BUTTON_NEW_DETAIL_REPORT)
         );
-        try {
-            TimeUnit.SECONDS.sleep(10);}
+        try {TimeUnit.SECONDS.sleep(5);}
         catch (InterruptedException e) {e.printStackTrace();}
     }
 }
