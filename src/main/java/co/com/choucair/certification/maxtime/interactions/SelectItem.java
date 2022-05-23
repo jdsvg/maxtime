@@ -29,7 +29,6 @@ public class SelectItem implements Interaction{
                         }
                         break;
                     }
-
     }
 
     public static SelectItem items_list(Target lista, String option){

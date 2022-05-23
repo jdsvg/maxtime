@@ -29,9 +29,9 @@ public class ReportTimesInMaxtimeStepDefinitions {
     }
 
 //  SCENARIO
-    @Given("^he go to select the record with the date of (.*)")
-    public void heGoToSelectTheRecordWithTheDateOfCurrent_date(String current_date) {
-        theActorInTheSpotlight().attemptsTo(GoToTheSectionNewReport.reportWith(current_date));
+    @Given("^he go to select the record with the last date")
+    public void heGoToSelectTheRecordWithTheLastDate() {
+        theActorInTheSpotlight().attemptsTo(GoToTheSectionNewReport.reportWithLastDate());
     }
 
     @Given("^creates a new detailed report$")
@@ -44,19 +44,9 @@ public class ReportTimesInMaxtimeStepDefinitions {
         theActorInTheSpotlight().attemptsTo(RegisterANewReport.withThe(new_report_data));
     }
 
-//    @Then("^now verifies the information in the new carving report record$")
-//    public void nowVerifiesTheInformationInTheNewCarvingReportRecord(List<MaxtimeData> data_report_maxtime) {
-//        theActorInTheSpotlight().should(GivenWhenThen.seeThat(TheTextIntheTableResponse.is(data_report_maxtime)));
-//    }
-//div#CP div.Item.ListViewItem tr tr +tr
-//    div#CP div.Item.ListViewItem table
-//    div#CP div.Item.ListViewItem table tr tr +tr        td+td+td+td+td+td         a
-//
-
-//
-//    @And("^he is going to close the day$")
-//    public void heIsGoingToCloseTheDay(){
-//
-//    }
+    @Then("^he will verify that the (.*) the (.*) the (.*) the (.*) the (.*) and the (.*) is found$")
+    public void nowVerifiesTheInformationInTheNewCarvingReportRecord(String proyecto, String servicio, String tipo_hora, String actividad, String horas_ejecutadas, String comentario) {
+        theActorInTheSpotlight().should(GivenWhenThen.seeThat(TheTextIntheTableResponse.is(proyecto, servicio, tipo_hora, actividad, horas_ejecutadas, comentario)));
+    }
 
 }
