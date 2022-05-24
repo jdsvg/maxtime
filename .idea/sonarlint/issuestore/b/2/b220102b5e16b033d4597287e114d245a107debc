@@ -1,0 +1,14 @@
+
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ğ†
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ğ†
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á‘Ÿ®
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á‘Ÿ®
+n	java:S116"TRename this field "tipo_hora" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤¬”ıÿÿÿÿ
+p	java:S116"[Rename this field "horas_ejecutadas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û—Š´
+^
+java:S1126("AReplace this if-then-else statement by a single return statement.(™ôŞ¥8»›Â0
+—
+java:S1128"uRemove this unused import 'co.com.choucair.certification.maxtime.userinterface.RegisterANewReportPage.TD_ITEMS_LIST'.(éóäÇûÿÿÿÿ8ø¶Ú0
+„
+java:S1128
+"bRemove this unused import 'net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled'.(¬ƒºáûÿÿÿÿ8õ Ú0
