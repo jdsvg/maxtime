@@ -1,5 +1,5 @@
 # Choucair: Reto 3 Maxtime
-Reto de automatizacion registro del reporte diario de actividades en la plataforma maxtime 
+Reto de automatizacion para el registro de reportes diarios sobre las actividades realizadas dia a dia, en la plataforma maxtime 
 
 ## Se implemento con:
  
